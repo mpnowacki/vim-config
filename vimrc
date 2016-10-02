@@ -106,8 +106,8 @@ endif
 "
 " https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
 if has('nvim')
-  let g:python_host_prog = $HOME.'/.pyenv/versions/neovim2/bin/python'
-  let g:python3_host_prog = $HOME.'/.pyenv/versions/neovim3/bin/python'
+  let g:python_host_prog = '/Users/mnowacki/.vim/pyvenv2/bin/python'
+  let g:python3_host_prog = '/Users/mnowacki/.vim/pyvenv3/bin/python'
 endif
 " }}}
 
@@ -174,6 +174,11 @@ augroup END
 
 " }}}
 
+" ycm_extra_conf {{{
+" this is not recommended, it's just a temporary fix for c/cpp projects without
+" their own ycm_extra_conf.py
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+" }}}
 augroup markdown
   autocmd!
   autocmd BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
