@@ -179,6 +179,14 @@ augroup END
 " their own ycm_extra_conf.py
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 " }}}
+
+" case insensitive :q and :w {{{
+" I always lift SHIFT too late after typing the ":" :)
+command Q q
+command W w
+command WQ wq
+command Wq wq
+" }}}
 augroup markdown
   autocmd!
   autocmd BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
