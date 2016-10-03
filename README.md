@@ -20,3 +20,9 @@ brew install --with-clang llvm # use your OS package manager
 cd ~/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer --gocode-completer
 ```
 
+## Using with virtualenv:
+
+So far I only figured one easy way:
+`PYTHONPATH=/path/to/virtualenv/lib/pythonX.Y/site-packages/ vim`
+
+when started this way, jedi will see the packages in your virtualenv
