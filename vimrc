@@ -187,6 +187,13 @@ command W w
 command WQ wq
 command Wq wq
 " }}}
+
+:map <expr> <silent> <F3> system('osascript -e "tell application \"System Events\" to keystroke 
+\                                 \":YcmCompleter \""; osascript -e "tell application 
+\                                 \"System Events\" to key code 48"')
+
+:map! <F3> <ESC> <F3>
+
 augroup markdown
   autocmd!
   autocmd BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
